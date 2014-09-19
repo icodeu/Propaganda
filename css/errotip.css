@@ -1,0 +1,5 @@
+.none{ display:none;}
+.msgArea{float: left;width: 100%;text-align: left;margin-bottom:5px;}
+.msgArea span.icon{width:18px;height: 20px;display: block;float: left;background: url('images.png')/*tpa=http://www.xiehui.com/images/images.png*/ no-repeat;background-position: -650px -324px;position: relative;
+z-index: 2;}
+.msgArea span.msg{color: #ff9b5f;width:360px;display:block;}

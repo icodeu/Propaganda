@@ -1,0 +1,675 @@
+
+
+	var myScroll;
+
+	var myScroll2;
+
+	function loaded() {
+
+		myScroll = new iScroll('wrapper');
+
+	}
+
+	function loaded2() {
+
+		myScroll2 = new iScroll('wrapper2',{
+
+			useTransform: false,
+
+			onBeforeScrollStart: function (e) {
+
+				var target = e.target;
+
+				while (target.nodeType != 1) target = target.parentNode;
+
+				if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+
+					e.preventDefault();
+
+			}
+
+		});
+
+	}
+
+	document.addEventListener('touchmove', function (e){ e.preventDefault(); }, false);
+
+	document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+
+	document.addEventListener('touchmove', function (e){ e.preventDefault(); }, false);
+
+	document.addEventListener('DOMContentLoaded', function (){ setTimeout(loaded2, 200);}, false);
+
+	
+
+	function sendComment(){
+
+		$('.sendbtn').addClass('sendbtn_disabled');
+
+		var ctxPathName = ""; //getRootPath();
+
+		
+
+		if ($('#userName').val().trim().length == 0 || checkHasScript($('#commentDesc').val().trim())) {
+
+			$('#userNamemsg').show();
+
+			setTimeout(function(){
+
+				$('#userNamemsg').hide();  
+
+			},3000); 
+
+			return;
+
+		}
+
+		
+
+		if ($('#commentDesc').val().trim().length == 0 || checkHasScript($('#commentDesc').val().trim())){
+
+			$('#commentDescmsg').show();
+
+			setTimeout(function(){
+
+				$('#commentDescmsg').hide();  
+
+			},3000);
+
+			return;
+
+		}
+
+		
+
+		$.ajax({
+
+			url: ctxPathName + '/customEventsComment.do?method=comment',
+
+			dataType: 'json',
+
+			type: 'post',
+
+			data:{userName: encodeURI($('#userName').val().trim()) ,
+
+				  commentDesc: encodeURI($('#commentDesc').val().trim()),
+
+				  events: 'goodbyesysu'},
+
+			success: function(e){
+
+				if (e.result == 'OK'){	
+
+					 
+
+					var obj = {commentDate: '刚刚发表',userName: $('#userName').val(),commentDesc: $('#commentDesc').val()};
+
+					localCache.results.splice(0,0,obj);
+
+					
+
+					localCache.count = localCache.count + 1;
+
+					$('#commentDesc').val('');
+
+					$('#userName').val('');
+
+					showData(); 										
+
+				}
+
+				$(".sendbtn").removeClass("sendbtn_disabled");
+
+			},
+
+			error: function(){
+
+				$(".sendbtn").removeClass("sendbtn_disabled");
+
+			}
+
+		});
+
+	}
+
+	
+
+	var localCache = {count: 0,results: []};
+
+	
+
+	function showData(){
+
+		var template = $('#commentTemplate').html();
+
+		var html = Mustache.to_html(template,localCache);
+
+		$("#commentList").html(html);
+
+		$("#totalComment").html(localCache.count);
+
+	}
+
+	
+
+	function getLastestComment(){
+
+		if ($('#commentList').children().length > 0)
+
+			loadComment('before',$($('#commentList').children()[0]).find('input').val(),false);
+
+		else
+
+			loadComment(undefined,undefined,false);
+
+	}
+
+	
+
+	function getOlderComment(){
+
+		if ($('#commentList').children().length > 0)
+
+			loadComment('after',$($('#commentList').children()[$('#commentList').children().length-1]).find('input').val(),false);
+
+		else
+
+			loadComment(undefined,undefined,false);
+
+	}
+
+	
+
+	function loadComment(getWay,customEventsCommentId,reload){
+
+		var ctxPathName = ""; //getRootPath();
+
+		$.ajax({
+
+			url: ctxPathName + '/customEventsComment.do?',
+
+			dataType: 'json',
+
+			type: 'post',
+
+			data: {getWay: getWay,customEventsCommentId: customEventsCommentId,events: 'goodbyesysu'},
+
+			success: function(e){
+
+				if (e.result == 'OK' && e.results.length > 0){
+
+					if (reload || getWay == undefined) //第一次没有数据
+
+						localCache = e;
+
+					else
+
+					{
+
+						localCache.count = e.count;						
+
+						if (getWay == 'after')
+
+						{
+
+							for(var i = 0; i < e.results.length; i++){
+
+								localCache.results.push(e.results[i]);
+
+							}
+
+							
+
+						}	
+
+						else{
+
+							for(var i = e.results.length; i >= 0; i--)								
+
+								localCache.results.splice(0,0,e.results[i]);
+
+						}	
+
+					}					
+
+					showData();
+
+				}
+
+			}
+
+		});
+
+	}
+
+	
+
+	$(function(){
+
+		
+
+		var n=0;
+
+		showFirst()
+
+		$('.nextpage').click(function(){
+
+			n++;
+
+			if(n==1){
+
+				$('#firstpage').animate({'height':0},500);
+
+				showSecond();
+
+			}
+
+			if(n==2){
+
+				$('#secondpage').animate({'height':0},500);	
+
+				showThird();
+
+			}
+
+			if(n==3){
+
+				$('#thirdpage').animate({'height':0},500);
+
+				showFour();
+
+				n=0;
+
+			}
+
+		})
+
+		$('.grp02-second').click(function(){
+
+			$('#secondpage').animate({'height':0},500);	
+
+			showThird();
+
+			n=2;
+
+		})
+
+		$('#touchgodown').click(function(){
+
+			$('#firstpage').animate({'height':0},500);
+
+			showSecond()
+
+		})
+
+		$('#back').click(function(){
+
+			$('.part01-first').animate({'opacity':1},200);
+
+			$('.page').animate({'height':'100%'},500);
+
+			$('#firstpage').animate({'height':'100%'},500);	
+
+		})
+
+		$('#firstpage').on('swipeup',function(e){
+
+			$(this).animate({'height':0},500);
+
+			showSecond()
+
+		})
+
+		$('#secondpage').on('swipeup',function(e){
+
+			$(this).animate({'height':0},500);
+
+			showThird();
+
+		})
+
+		$('#secondpage').on('swipedown',function(e){
+
+			$('.part01-first').animate({'opacity':1},200);
+
+			$('#firstpage').animate({'height':'100%'},500);
+
+		})
+
+		$('#thirdpage').on('swipeup',function(e){
+
+			$(this).animate({'height':0},500);
+
+			showFour()
+
+		})
+
+		$('#thirdpage').on('swipedown',function(e){
+
+			$('#secondpage').animate({'height':'100%'},500);
+
+		})
+
+		$('#fourpage').on('swipedown',function(e){
+
+			$('#thirdpage').animate({'height':'100%'},500);
+
+		})
+
+		function showFirst(){
+
+			$('.part01-first').animate({'opacity':1},500,function(){$('.part02-first').animate({'opacity':1},500,function(){$('.part04-first').animate({'opacity':1},500,function(){$('.nextpage').animate({'opacity':1},500)})})});
+
+		}
+
+		function showSecond(){
+
+			$('.part01-first').animate({'opacity':0},500);
+
+			$('.part01-second').animate({'opacity':1},1000,function(){$('.grp01-second').animate({'opacity':1},500,function(){$('.grp02-second').animate({'opacity':1},500)})})
+
+		}
+
+		function showThird(){
+
+			$('.p1txt').animate({'opacity':1},1000,function(){$('.part02-third').animate({'opacity':1},500,function(){$('.textbox').animate({'opacity':1},500)})})
+
+		}
+
+		function showFour(){
+
+			$('.part01-four img').animate({'width':186},1000,function(){$('#back').animate({'opacity':1},500)});
+
+			$('.copyright').animate({'opacity':1},2000);
+
+		}
+
+		$('.schedule').click(function(){
+
+			$('.schedulebox').animate({'bottom':0},800);
+
+		})
+
+		$('#scheduleheader').click(function(){
+
+			$('.schedulebox').css({'bottom':'-200%'},500);
+
+		})
+
+		
+
+		$('.closemess').click(function(){
+
+			$('.messagebox').animate({'bottom':'-100%'},500);
+
+			$('.messagebg').fadeOut();
+
+			$(window).scrollTop(0)
+
+		})
+
+		$('.contacttable').click(function(){
+
+			$('.timebox').animate({'height':'100%'},500);
+
+		})
+
+		$('#timeheader').click(function(){
+
+			$('.timebox').animate({'height':'0'},500);
+
+		})
+
+		$('.messicon').click(function(){
+
+			$('#scroller2').css('top','0')
+
+			$('.messarea').focus();
+
+		})
+
+		$('.messarea').focus(function(){
+
+			$(this).val('');
+
+		})
+
+		loadComment(undefined,undefined,true);
+
+		
+
+	});
+
+ 
+
+
+
+var dataForWeixin={
+
+ 
+
+   appId: "",
+
+ 
+
+   MsgImg: "img/logo.png",
+
+ 
+
+   TLImg: "img/logo.png",
+
+ 
+
+   url: "http://propaganda.sinaapp.com",
+
+ 
+
+   title: "计算机团委宣传部邀请函——Waiting For You！",
+
+ 
+
+   desc: "亲爱哒2014级新生，在团宣面试上，期待你的出现！",
+
+ 
+
+   fakeid: "",
+
+ 
+
+   callback:function(){}
+
+ 
+
+};
+
+(function(){
+
+	
+
+	
+
+    var onBridgeReady = function() {
+
+
+
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+
+
+
+            WeixinJSBridge.invoke('sendAppMessage', {
+
+
+
+                "appid": dataForWeixin.appId, 
+
+
+
+                "img_url": dataForWeixin.MsgImg, 
+
+
+
+                "img_width": "120", 
+
+
+
+                "img_height": "120", 
+
+
+
+                "link": dataForWeixin.url, 
+
+
+
+                "desc": dataForWeixin.desc, 
+
+
+
+                "title": dataForWeixin.title
+
+
+
+            }, function(res) {
+
+                (dataForWeixin.callback)();
+
+            });
+
+        });
+
+
+
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+
+
+
+            (dataForWeixin.callback)();
+
+
+
+            WeixinJSBridge.invoke('shareTimeline',{
+
+
+
+                "img_url": dataForWeixin.TLImg, 
+
+
+
+                "img_width": "120", 
+
+
+
+                "img_height": "120", 
+
+
+
+                "link": dataForWeixin.url, 
+
+
+
+                "desc": dataForWeixin.desc, 
+
+
+
+                "title": dataForWeixin.title
+
+
+
+            }, function(res) {
+
+            });
+
+        });
+
+            
+
+        WeixinJSBridge.on('menu:share:weibo', function(argv) {
+
+
+
+            WeixinJSBridge.invoke('shareWeibo',{
+
+
+
+                "content": dataForWeixin.title, 
+
+
+
+                "url": dataForWeixin.url
+
+
+
+            }, function(res){
+
+                (dataForWeixin.callback)();
+
+            });
+
+        });
+
+
+
+        WeixinJSBridge.on('menu:share:facebook', function(argv) {
+
+
+
+            (dataForWeixin.callback)();
+
+
+
+            WeixinJSBridge.invoke('shareFB', {
+
+
+
+                "img_url": dataForWeixin.TLImg, 
+
+
+
+                "img_width": "120", 
+
+
+
+                "img_height": "120", 
+
+
+
+                "link": dataForWeixin.url, 
+
+
+
+                "desc": dataForWeixin.desc, 
+
+
+
+                "title": dataForWeixin.title
+
+
+
+            }, function(res) {
+
+            });
+
+        });
+
+    };
+
+ 
+
+    if (document.addEventListener) {
+
+
+
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+
+     
+
+    } else if (document.attachEvent) {
+
+
+
+        document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+
+        document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+
+    }
+
+})();

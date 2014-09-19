@@ -1,0 +1,120 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;} article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+a:hover, a:active { outline:none; }
+select, input, textarea, button { font:99% sans-serif; }
+input, select { vertical-align:middle; }
+ul,ol,li{list-style:none;}
+img { border:0; max-width:100%; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+.nocallout {-webkit-touch-callout: none;} /* prevent callout */
+table{ margin:0; padding:0; clear:left; width:100%; border-collapse:collapse; border-spacing:0; }
+table td { vertical-align:top; margin:0; }
+html{height:100%;}
+body {font:13px/1.4 sans-serif; *font-size: small;word-wrap:break-word;margin:0 auto;-webkit-text-size-adjust: none;color:#3c3c3c;font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif; height:100%;}
+a{color:#1191C3; text-decoration:none;}
+.bodyindex{ background:#707070;}
+.pr{ position:relative;}
+.pa{ position:absolute;}
+.fx{ position:fixed;}
+.tc{ text-align:center;}
+.yel{ color:#fcb314;}
+.tl{ text-align:left;}
+.tc{ text-align:center;}
+.tr{ text-align:right;}
+.fl{ float:left;}
+.fr{ float:right;}
+.cf{ clear:both;}
+.cur{ cursor:pointer;}
+.zsdx{color:085827;}
+body{ overflow:hidden; background:#4787c8;}
+
+#firstpage{ height:100%; background:url(bg01.jpg)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/bg01.jpg*/ no-repeat center top; background-size:100% 100%; background-color:#4787c8;position:relative;}
+#secondpage{ height:100%; background:url(bg02.jpg)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/bg02.jpg*/ no-repeat center top;background-size:100% 100%;position:relative;}
+#thirdpage{ height:100%; background:url(bg03.jpg)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/bg03.jpg*/ no-repeat center top;background-size:100% 100%;position:relative;}
+#fourpage{ height:100%; background:url(bg04.jpg)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/bg04.jpg*/ no-repeat center top;background-size:100% 100%;position:relative;}
+.nextpage{ display:block; background:url(go.gif)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/go.gif*/ no-repeat; width:33px; height:33px;background-size:100% 100%; position:absolute; right:15px; bottom:15px; cursor:pointer; opacity:0; z-index:3;}
+.part01-first{ left:0; top:0; width:100%; text-align:center; opacity:0; padding-top:14px; height:60px; border-bottom:1px solid #063112; background:#4787c8;}
+.part01-first img{ margin:0 auto;}
+.part02-first{left:42px; top:100px;opacity:0;}
+.part03-first{left:0; bottom:94px; width:100%; text-align:right; opacity:0;}
+.part03-first img{ margin-right:26px;}
+.part04-first{left:0; bottom:66px; width:100%; text-align:right;opacity:0;}
+
+.part01-second{ padding-top:50px; margin-bottom:18px; opacity:0;font-size:12px;}
+.grp01-second{ margin:0 30px; padding-bottom:5px; text-align:left; color:#fff; line-height:20px;}
+.grp01-second p{ text-indent:2em; margin-bottom:5px;font-size:12px;}
+.grp01-second h3{ font-size:14px; padding-bottom:10px;}
+.grp02-second{ width:100%; text-align:right; color:#fff; padding-top:10px;}
+.grp02-second p{ margin-right:30px;font-size:12px; margin-bottom:5px;}
+.grp03-second{ margin:0 30px; text-align:left; color:#fff; line-height:20px;}
+.grp03-second a{ padding-left:8px;}
+.grp01-second,.grp02-second,.grp03-second{ opacity:0;}
+.part03-second{ bottom:50px; right:0;opacity:0;}
+.map{ width:110px; height:110px; border:3px solid #4787c8; border-radius:55px;}
+.maptitle{ margin-bottom:5px; margin-right:4px;}
+
+.part01-third{ padding-top:105px; padding-left:24px;}
+.part01-third p{ margin-bottom:30px;opacity:0;}
+.part02-third{ right:2px; bottom:168px; z-index:10; opacity:0;}
+.part03-third{ left:0; bottom:80px; width:100%; text-align:left;}
+.schedulein{ margin-right:28px; background:#4787c8;}
+.schedulebg{ padding:51px 0 15px 0;height:67px;}
+.textbox{opacity:0; position:absolute; width:100%;}
+.textbox h4{ font-size:15px; margin-bottom:7px; color:#fff;}
+.textbox h4 strong{ font-size:21px; padding-right:3px;}
+.intro em{ padding-right:3px;}
+.intro{ line-height:24px; color:#fff;}
+.schedule{ cursor:pointer; margin-right:12px; text-indent:-999em; outline:none; display:inline-block; background:url(btn_schedular.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/btn_schedular.png*/ no-repeat; width:135px; height:45px; background-size:100% 100%;}
+.messagebtn{cursor:pointer; text-indent:-999em; display:inline-block; outline:none; background:url(btn_message.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/btn_message.png*/ no-repeat; width:135px; height:45px; background-size:100% 100%;}
+.contacttable{ cursor:pointer; display:inline-block; text-indent:-999em; background:url(btn_contact.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/btn_contact.png*/ no-repeat; width:135px; height:45px; background-size:100% 100%;}
+.schedulebox{height:100%; position:absolute; overflow:hidden; left:0; bottom:-200%; z-index:12; width:100%;}
+.schedule-inbox{ margin:11px 6px 0 6px; height:100%; position:relative; background:#eee; border-radius:8px; overflow:hidden;}
+.header-schedule{ height:46px; font-size:14px; text-align:center; font-weight:bold; color:#03C; line-height:46px;}
+.header-schedule h4{ font-weight:bold; font-size:14px;}
+.close{ background:url(close.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/close.png*/ no-repeat; position:absolute; top:14px; cursor:pointer; left:12px; width:16px; height:16px; background-size:100% 100%; display:block;}
+.timebox{height:0; position:absolute; overflow:hidden; left:0; bottom:0; z-index:12; width:100%;}
+.close{ background:url(close.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/close.png*/ no-repeat; position:absolute; top:14px; cursor:pointer; left:12px; width:16px; height:16px; background-size:100% 100%; display:block;}
+#wrapper{position:absolute; z-index:1;top:46px; bottom:0; left:0;width:100%;overflow:auto;}
+#scroller{position:absolute; z-index:1;width:100%;}
+#scroller ul{width:100%;text-align:center}
+
+
+.fold{ background:url(fold_icon.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/fold_icon.png*/ no-repeat; width:22px; height:133px;background-size:100% 100%; right:6px; bottom:0;}
+.part01-four{ bottom:189px; text-align:center; width:100%;}
+.part01-four img{ margin:0 auto; width:0;}
+.back{ bottom:114px; width:100%;opacity:0;}
+.copyright{ bottom:74px; width:100%; opacity:0; font-size:9px; color:#fff; position:absolute;}
+.copyright p{ line-height:18px;}
+.weixinlogo{ position:absolute; left:-999em;}
+.ftbox{  width:100%; position:absolute; left:0; bottom:8px;}
+/*¡Ù—‘*/
+.messagebg{ background:#000;opacity:0.8; left:0; top:0; position:absolute; display:none; height:100%; width:100%;}
+.messagebox{height:100%; position:fixed; z-index:20; overflow:hidden; left:0; bottom:-200%; width:100%;}
+.messicon{ display:block; z-index:100; cursor:pointer; background:url(mess_icon.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/mess_icon.png*/ no-repeat; width:26px; height:17px; background-size:100% 100%; position:absolute; right:15px; top:15px;}
+.closemess{display:block; cursor:pointer; background:url(closemess.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/closemess.png*/ no-repeat; width:16px; height:16px; background-size:100% 100%; position:absolute; left:22px; top:15px;}
+.areawrap{ margin-right:7px;}
+#wrapper2{ background:url(topbg.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/topbg.png*/ no-repeat center top #eee;position:absolute; z-index:13;top:46px; bottom:0; left:0;width:100%;overflow:auto;}
+#scroller2{position:absolute; z-index:1;width:100%;}
+#scroller2 ul{width:100%;text-align:center}
+.box01-message{ margin:0 12px; z-index:14;}
+.messarea{ width:100%; height:84px; text-align:left; border:1px solid #fff; border:1px solid #d0d0d0; border-radius:5px; margin-top:12px; margin-bottom:8px; font-size:14px; color:#999;}
+.sendbtn{display:block; border:none; text-indent:-999em; cursor:pointer; background:url(sendbtn.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/sendbtn.png*/no-repeat; width:102px; height:34px; background-size:100% 100%; position:absolute; right:0; top:0;}
+.part01-message p{ margin-right:121px;}
+.part01-message .usertext{ width:100%; border:1px solid #d0d0d0; height:28px; line-height:28px; line-height:normal; border-radius:5px; text-indent:8px;}
+.box02-message{ margin:0 10px; text-align:left;}
+.top-message{ position:relative; height:42px; line-height:34px; border-bottom:1px solid #d0d0d0; padding-top:5px; border-bottom:1px solid #d0d0d0;}
+.top-message strong{ font-size:15px; left:38px; position:absolute; top:14px;}
+.top-message span{ color:#919191; right:0; top:14px;}
+.refresh{ left:0; top:15px; cursor:pointer; display:block; position:absolute;}
+.grp-message{ padding:6px 0; color:#3d494f; border-bottom:1px solid #d0d0d0;}
+.grp-message:last-child{ border-bottom:none;}
+.arr01-message{ height:24px;}
+.arr01-message span{ float:right; font-size:10px; color:#d0d0d0;}
+.arr01-message strong{ color:#032510; font-size:14px;}
+.arr02-message{ clear:both;}
+.getmore{ width:100%; padding-bottom:10px; cursor:pointer;}
+.sendbtn_disabled{ background:url(post_disable.png)/*tpa=http://www.xiehui.com/html2.0/images/goodbye/post_disable.png*/ no-repeat; width:102px; height:34px; background-size:100% 100%; cursor:ne-resize;}
+@media screen and (min-width:1024px){
+  .page,.schedulebox,.messagebox{ width:640px; margin:0 auto;}
+  .schedulebox,.messagebox{ left:50%; margin-left:-320px;}
+  body{ background:none;}
+}

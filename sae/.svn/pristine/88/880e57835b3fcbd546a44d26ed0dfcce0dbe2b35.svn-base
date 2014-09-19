@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>计算机学院团委宣传部邀请函</title>
+		<link type="text/css" rel="stylesheet" href="http://lefftte.com/VKE/goodbye/goodbye.css">
+		<link type="text/css" rel="stylesheet" href="http://lefftte.com/VKE/goodbye/errotip.css">
+		<script type="text/javascript" src="http://lefftte.com/VKE/goodbye/jquery-1.8.3.min.js"></script>
+		<script src="http://lefftte.com/VKE/goodbye/jquery.event.move.js"></script>
+		<script src="http://lefftte.com/VKE/goodbye/jquery.event.swipe.js"></script>
+		<script type="text/javascript" src="http://lefftte.com/VKE/goodbye/iscroll.js"></script>
+		<script type="text/javascript" src="http://lefftte.com/VKE/goodbye/ngoUtil.js"></script>
+		<script type="text/javascript" src="http://lefftte.com/VKE/goodbye/mustache.js"></script>
+		<script type="text/javascript" src="http://lefftte.com/VKE/goodbye/goodbyesysu.js"></script>
+	</head>
+
+	<body>
+		<div style="display:none">
+			<audio controls="controls" autoplay="autoplay" loop="loop">
+				<source src="http://lefftte.com/VKE/goodbye/111.mp3" type="audio/ogg" hidden="true" />
+				<source src="http://lefftte.com/VKE/goodbye/111.mp3" type="audio/mpeg" hidden="true" />
+			</audio>
+
+
+		</div>
+
+		<section class="page" id="firstpage">
+			<div class="part01-first pa">
+
+				<img width="166" src="img/pg_01.png" />
+			</div>
+			<div class="part02-first pa">
+				<img width="219" src="img/pg_02.png" />
+			</div>
+			<div id="touchgodown">
+				<div class="part04-first pa">
+					<img width="303" src="img/pg_04.png" />
+				</div>
+				<span class="nextpage">&nbsp;</span>
+			</div>
+		</section>
+		<section class="page tc" id="secondpage">
+			<div class="part01-second">
+				<img width="264" src="img/pg_2_01.png" />
+			</div>
+			<div class="part02-second">
+				<div class="grp01-second">
+					<h3>亲爱的2014级新生：</h3>
+					<p>共青团北京交通大学计算机与信息技术学院委员会宣传部在院团委的直接领导下开展工作，是我院对外宣传的重要窗口。</p>
+					<p>活动组：组织PS技术培训、撰写新闻稿、举办设计大赛。</p>
+ 					<p>海报组:学习PS技术、利用PS技术制作海报、绘制黑板报。</p>
+ 					<p>编辑组：制作迎新专刊、《奔腾》院刊、电子刊物、学院简报、小记者采访。</p>
+ 					<p>新媒体组：维护微信公众平台，“计小科”APP设计、制作、日常管理。</p>
+ 					<p>视频组：学习视频技术，制作、剪辑视频。</p>
+				</div>
+				<div class="grp02-second">
+					<p>计算机与信息技术学院团委宣传部</p>
+					<p>2014年9月</p>
+				</div>
+			</div>
+			<span class="nextpage">&nbsp;</span>
+			<div class="ftbox">
+				<img width="134" src="img/ftbg.png" />
+			</div>
+		</section>
+		<section class="page tc" id="thirdpage">
+			<div class="part01-third tl">
+				<p class="p1txt">
+					<img width="154" src="img/pg_3_01.png" />
+				</p>
+			</div>
+			<div class="part02-third pa">
+				<img class="maptitle" width="190" src="img/pg_2_03.png" />
+				<a href="http://map.baidu.com/mobile/webapp/search/search/qt=s&wd=%E5%8C%97%E4%BA%AC%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6&c=131&searchFlag=bigBox&version=5&exptype=dep&nb_x=12951947.13&nb_y=4831960.26&center_rank=1/vt=map/?fromhash=1#place/detail/qt=s&wd=%E5%8C%97%E4%BA%AC%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6&c=131&searchFlag=bigBox&version=5&exptype=dep&nb_x=12951947.13&nb_y=4831960.26&center_rank=1&pn=1&rn=10/i=6&showall=1&detail_from=list&vt=map"
+				target="_blank">
+					<img class="map" src="map.png" />
+				</a>
+			</div>
+			<div class="part03-third pa">
+				<div class="schedulein">
+					<span class="fold pa">&nbsp;</span>
+					<div class="schedulebg">
+						<div class="textbox tc">
+							<span class="schedule">北京交通大学毕业典礼议程</span>
+							<a href="http://lefftte.com/VKE/wish/wish.php" target="_blank" "><span class="messagebtn ">毕业留言墙</span><a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <span class="nextpage ">&nbsp;</span>
+
+    <div class="ftbox "><img width="134 " src="img/ftbg.png "  /></div>
+
+</section>
+
+<section class="page tc " id="fourpage ">
+
+	<div class="part01-four tc pa ">
+
+    	<img width="186 " src="img/pg_4_01.png "  />
+
+    </div>
+
+    <div class="back cur tc pa " id="back "><img src="img/back.png "  width="206 " /></div>
+
+    <div class="ftbox "><img width="134 " src="img/ftbg.png "  /></div>
+
+</section>
+
+<div class="schedulebox ">
+
+    <div class="schedule-inbox ">
+
+    	<header class="header-schedule pr " id="scheduleheader "><b class="close "></b><h4>北京交通大学毕业典礼议程</h4></header>
+
+        <div id="wrapper ">
+
+            <div id="scroller ">
+
+                <ul id="thelist " class="tc ">
+
+                    <li><img id="schedulimg " src="img/schedule.jpg "  width="300 " /></li> 
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="messagebg "></div>
+
+<!--
+
+<div class="messagebox ">
+
+    <div class="schedule-inbox ">
+
+    	<header class="header-schedule pr " id="messageheader "><b class="closemess "></b><b class="messicon "></b><h4>毕业留言墙</h4></header>
+
+        <div id="wrapper2 ">
+
+            <div id="scroller2 ">
+
+                <ul id="thelist2 " class="tc ">
+
+                    <li id="topli ">
+
+                    	<div class="box01-message ">
+
+                        	<div class="areawrap "><textarea class="messarea " id="commentDesc " value=" ">在这里写下想说的话...</textarea>
+
+                        	<p class="msgArea none " id="commentDescmsg ">
+
+								<span class="msg ">请填写想说的话</span>
+
+							</p>
+
+                        	</div>
+
+                            <div class="part01-message pr ">
+
+                            	<p><input type="text " placeholder="逸小仙 10级 中山医 " class="usertext " id="userName " value=" "/></p>
+
+                            	<p class="msgArea none " id="userNamemsg ">
+
+									<span class="msg ">请填写名字</span>
+
+								</p>
+
+                                <button class="sendbtn pa " onClick="sendComment(); ">发送</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="box02-message ">
+
+                        	<div class="top-message pr "><span class="pa ">共<a id="totalComment "></a>条</span><b class="refresh ">
+
+                        	<img src="refresh.png "  width="32 " onclick="getLastestComment(); "/></b><strong>最新留言</strong></div>
+
+                            <div class="mid-message " id="commentList ">
+
+                            	                                                                                                                               
+
+                            </div>
+
+                            <div class="getmore tc "><img src="getmore.png "  width="282 " onclick="getOlderComment(); "/></div>
+
+                        </div>
+
+                    </li> 
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+-->
+
+<div style="display:none "><script type="text/javascript ">var cnzz_protocol = (("https: " == document.location.protocol) ? " https:// " : " http:// ");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000372574' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000372574'
+							type='text/javascript' %3E%3C/script%3E "));</script></div>
+
+<!--"<span id='cnzz_stat_icon_1000372574'>
+								</span>
+								<script src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php?id=1000372574' type='text/javascript'></script>"-->
+	</body>
+	<script type="text/template" id="commentTemplate">
+		{{#results}}
+		<div class="grp-message">
+			<input type="hidden" value="{{customEventsCommentId}}">
+			<div class="arr01-message"><span>{{commentDate}}</span><strong>{{userName}}</strong>
+			</div>
+			<div class="arr02-message">
+				{{commentDesc}}
+			</div>
+		</div>
+		{{/results}}
+	</script>
+
+</html>
