@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <title>报名来团宣就有精美小礼品！</title>
+    <title>报名来团宣就有精美小礼品！2014级新生必看</title>
     <style type="text/css">
 
         #lotteryContainer {
