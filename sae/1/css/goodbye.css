@@ -38,6 +38,7 @@ body{ overflow:hidden; background:#4787c8;}
 .part03-first{left:0; bottom:94px; width:100%; text-align:right; opacity:0;}
 .part03-first img{ margin-right:26px;}
 .part04-first{left:0; bottom:66px; width:100%; text-align:right;opacity:0;}
+.part04-another{left:0; bottom:66px; width:100%; text-align:left;opacity:0;}
 
 .part01-second{ padding-top:50px; margin-bottom:18px; opacity:0;font-size:12px;}
 .grp01-second{ margin:0 30px; padding-bottom:5px; text-align:left; color:#fff; line-height:20px;}
